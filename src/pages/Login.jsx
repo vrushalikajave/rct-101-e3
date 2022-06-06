@@ -2,9 +2,7 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 
-  const Remove=()=>{
-    
-  }
+
 
   const Count=()=>{
     const[c, setc]=useState(0)
@@ -12,9 +10,9 @@ import { AuthContext } from "../context/AuthContext";
     
 
     <div style={{display:"flex"}}>
-    <button>+</button>
-    <p> {0}</p>
-    <button onClick={Remove}>-</button>
+    <button onClick={ () => setc(c+1) }>+</button>
+    <p> {c}</p>
+    <button  onClick={  () => {setc(c-1) }}>-</button>
     </div>
     
   )
